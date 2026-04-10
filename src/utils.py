@@ -18,7 +18,7 @@ def overview(df, name="DataFrame"):
     # --- Dimensions ---
     print(f"  Shape : {df.shape[0]} lignes x {df.shape[1]} colonnes")
     
-    # --- Poids en mémoire (deep=True compte aussi les strings) ---
+    # --- Poids en mémoire ---
     print(f"  Mémoire : {df.memory_usage(deep=True).sum() / 1e6:.1f} Mo")
     
     # --- Lignes dupliquées ---
@@ -33,7 +33,7 @@ def overview(df, name="DataFrame"):
 
     print(f"  Valeurs manquantes : {len(missing_df)} colonnes")
     if len(missing_df) > 0:
-        print(missing_df.to_string())       # Toutes les colonnes, pas de head(10)
+        print(missing_df.to_string())      
     else:
         print("    Aucune !")
 
